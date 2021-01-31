@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {View, Text} from 'react-native';
 import PropTypes from 'prop-types';
 import {MainContext} from '../contexts/MainContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -31,7 +31,7 @@ const Login = ({navigation}) => {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <View>
       <Text>Login</Text>
       <LoginForm navigation={navigation} />
       <Text>Register</Text>
@@ -39,15 +39,6 @@ const Login = ({navigation}) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 Login.propTypes = {
   navigation: PropTypes.object,
